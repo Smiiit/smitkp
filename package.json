@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "description": "A React app deployed on GitHub Pages",
   "author": "Smit K Panchal",
-  "homepage": "https://Smiiit.github.io/smitkp",
+  "homepage": "/",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.17.0",
