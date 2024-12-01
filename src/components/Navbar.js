@@ -64,7 +64,7 @@ const Navbar = () => {
           <a
             className={` text-secondary hover:text-white text-[18px] font-medium cursor-pointer`}
             href="/smit-resume.pdf"
-            target="_blank" 
+            target="_blank"
             rel="noopener noreferrer"
           >
             Resume
@@ -99,6 +99,14 @@ const Navbar = () => {
                   <a href={`#${nav.id}`}>{nav.title}</a>
                 </li>
               ))}
+              <a
+                className={` text-secondary hover:text-white text-[18px] font-medium cursor-pointer`}
+                href="/smit-resume.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Resume
+              </a>
             </ul>
           </div>
         </div>
