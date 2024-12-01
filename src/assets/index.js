@@ -6,6 +6,12 @@ import web from "./web.png";
 import github from "./github.png";
 import menu from "./menu.svg";
 import close from "./close.svg";
+import travel from "./travel-website.png";
+import recipe from "./recipe-website.png";
+import chatapp from "./chat-app-website.png";
+import todolist from "./todo-list-website.png";
+import portfolio from "./portfolio.png";
+import comingsoon from "./comingsoon.png";
 
 import css from "./tech/css.png";
 import docker from "./tech/docker.png";
@@ -37,8 +43,13 @@ import elecon from "./company/elecon-logo.png";
 import upskill from "./company/upskill-logo.jpg";
 import sap from "./company/sap-logo.svg";
 
-
 export {
+  comingsoon,
+  portfolio,
+  todolist,
+  chatapp,
+  recipe,
+  travel,
   python,
   mui,
   elecon,
@@ -73,4 +84,3 @@ export {
   jobit,
   tripguide,
 };
-

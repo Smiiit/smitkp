@@ -22,6 +22,12 @@ import {
   jobit,
   tripguide,
   threejs,
+  travel,
+  recipe,
+  chatapp,
+  todolist,
+  portfolio,
+  comingsoon,
 } from "../assets";
 
 export const navLinks = [
@@ -214,16 +220,16 @@ const testimonials = [
 
 const projects = [
   {
-    name: "Car Rent",
+    name: "Travel Here",
     description:
-      "Web-based platform that allows users to search, book, and manage car rentals from various providers, providing a convenient and efficient solution for transportation needs.",
+      "Built the Travel Here platform, enabling user exploration of landmarks and attractions with a seamless interface. Enhanced user engagement through smooth transitions and optimized performance.",
     tags: [
       {
-        name: "react",
+        name: "html",
         color: "blue-text-gradient",
       },
       {
-        name: "mongodb",
+        name: "css",
         color: "green-text-gradient",
       },
       {
@@ -231,13 +237,13 @@ const projects = [
         color: "pink-text-gradient",
       },
     ],
-    image: carrent,
-    source_code_link: "https://github.com/",
+    image: travel,
+    source_code_link: "https://smiiit.github.io/travel-website/",
   },
   {
-    name: "Job IT",
+    name: "Recipe Finder",
     description:
-      "Web application that enables users to search for job openings, view estimated salary ranges for positions, and locate available jobs based on their current location.",
+      "Recipe Maker is a web application that allows users to search for recipes based on ingredients they have, generate a shopping list, and view step-by-step instructions for preparing the dish. .",
     tags: [
       {
         name: "react",
@@ -252,20 +258,20 @@ const projects = [
         color: "pink-text-gradient",
       },
     ],
-    image: jobit,
-    source_code_link: "https://github.com/",
+    image: recipe,
+    source_code_link: "https://smiiit.github.io/recipe-finder/",
   },
   {
-    name: "Trip Guide",
+    name: "Chat App",
     description:
-      "A comprehensive travel booking platform that allows users to book flights, hotels, and rental cars, and offers curated recommendations for popular destinations.",
+      "A real-time chat application built with React.js and Firebase, allowing users to log in and communicate with each other in real-time.",
     tags: [
       {
-        name: "nextjs",
+        name: "reactjs",
         color: "blue-text-gradient",
       },
       {
-        name: "supabase",
+        name: "firebase",
         color: "green-text-gradient",
       },
       {
@@ -273,8 +279,71 @@ const projects = [
         color: "pink-text-gradient",
       },
     ],
-    image: tripguide,
-    source_code_link: "https://github.com/",
+    image: chatapp,
+    source_code_link: "https://smiiit.github.io/chat/",
+  },
+  {
+    name: "Portfolio",
+    description:
+      "My personal portfolio website, showcasing my skills and experience as a software engineer. Features a responsive design, smooth animations, and a comprehensive overview of my projects and achievements.",
+    tags: [
+      {
+        name: "canvas",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "frammer motion",
+        color: "green-text-gradient",
+      },
+      {
+        name: "Three JS",
+        color: "pink-text-gradient",
+      },
+    ],
+    image: portfolio,
+    source_code_link: "https://smitkp.vercel.app",
+  },
+  {
+    name: "Todo List",
+    description:
+      "A simple yet powerful to-do list application that allows users to create, update, and delete tasks, and features a responsive design and smooth animations.",
+    tags: [
+      {
+        name: "reactjs",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "sessionStorage",
+        color: "green-text-gradient",
+      },
+      {
+        name: "js",
+        color: "pink-text-gradient",
+      },
+    ],
+    image: todolist,
+    source_code_link: "https://smiiit.github.io/todo-list/",
+  },
+  {
+    name: "Data Visualizations",
+    description:
+      "An advanced data analytics platform that enables users to visualize, analyze, and derive insights from vast datasets, with customizable dashboards and real-time data processing capabilities.",
+    tags: [
+      {
+        name: "Power BI",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "python",
+        color: "green-text-gradient",
+      },
+      {
+        name: "excel",
+        color: "pink-text-gradient",
+      },
+    ],
+    image: comingsoon,
+    source_code_link: "/",
   },
 ];
 
