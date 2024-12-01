@@ -3,7 +3,6 @@ import { motion } from "framer-motion";
 import { styles } from "../styles";
 import ComputerCanvas from "./canvas/Computer";
 
-
 export default function Hero() {
   return (
     <section className={`relative w-full h-screen mx-auto`}>
@@ -47,5 +46,5 @@ export default function Hero() {
         </a>
       </div>
     </section>
-  )
+  );
 }
