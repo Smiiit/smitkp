@@ -61,6 +61,14 @@ const Navbar = () => {
               <a href={`#${nav.id}`}>{nav.title}</a>
             </li>
           ))}
+          <a
+            className={` text-secondary hover:text-white text-[18px] font-medium cursor-pointer`}
+            href="/smit-resume.pdf"
+            target="_blank" 
+            rel="noopener noreferrer"
+          >
+            Resume
+          </a>
         </ul>
 
         <div className="sm:hidden flex flex-1 justify-end items-center">

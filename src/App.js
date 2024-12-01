@@ -8,6 +8,7 @@ import Tech from "./components/Tech";
 import Works from "./components/Works";
 import Contact from "./components/Contact";
 import StarsCanvas from "./components/canvas/Stars";
+import Footer from "./components/Footer";
 
 export default function App() {
   return (
@@ -24,6 +25,7 @@ export default function App() {
         <div className="relative z-0">
           <Contact />
           <StarsCanvas />
+          <Footer />
         </div>
       </div>
     </BrowserRouter>
