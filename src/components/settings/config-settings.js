@@ -5,12 +5,12 @@ import { defaultFont } from 'src/theme/core/typography';
 export const STORAGE_KEY = 'app-settings';
 
 export const defaultSettings = {
-  colorScheme: 'light',
+  colorScheme: 'dark',
   direction: 'ltr',
   contrast: 'default',
-  navLayout: 'vertical',
-  primaryColor: 'default',
+  navLayout: 'mini',
+  primaryColor: 'blue',
   navColor: 'integrate',
-  compactLayout: true,
+  compactLayout: false,
   fontFamily: defaultFont,
 };

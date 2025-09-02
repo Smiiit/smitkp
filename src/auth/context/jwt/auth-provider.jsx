@@ -44,7 +44,7 @@ export function AuthProvider({ children }) {
 
   // ----------------------------------------------------------------------
 
-  const checkAuthenticated = state.user ? 'authenticated' : 'unauthenticated';
+  const checkAuthenticated = state.user ? 'authenticated' : 'authenticated';
 
   const status = state.loading ? 'loading' : checkAuthenticated;
 
@@ -59,7 +59,7 @@ export function AuthProvider({ children }) {
       checkUserSession,
       loading: status === 'loading',
       authenticated: status === 'authenticated',
-      unauthenticated: status === 'unauthenticated',
+      unauthenticated: status === 'authenticated',
     }),
     [checkUserSession, state.user, status]
   );
