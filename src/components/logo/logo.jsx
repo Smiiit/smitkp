@@ -13,7 +13,7 @@ import { logoClasses } from './classes';
 // ----------------------------------------------------------------------
 
 export const Logo = forwardRef(
-  ({ width = 60, height = 60, disableLink = false, className, href = '/', sx, ...other }, ref) => {
+  ({ width = 40, height = 40, disableLink = false, className, href = '/', sx, ...other }, ref) => {
     const theme = useTheme();
 
     const gradientId = useId();

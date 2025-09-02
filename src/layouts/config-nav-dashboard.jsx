@@ -2,6 +2,7 @@ import { paths } from 'src/routes/paths';
 
 import { CONFIG } from 'src/config-global';
 
+import { Iconify } from 'src/components/iconify';
 import { SvgColor } from 'src/components/svg-color';
 
 // ----------------------------------------------------------------------
@@ -40,32 +41,29 @@ const ICONS = {
 // ----------------------------------------------------------------------
 
 export const navData = [
-  /**
-   * Overview
-   */
   {
-    subheader: 'Overview 6.0.0',
+    // subheader: 'Overview 6.0.0',
     items: [
-      { title: 'One', path: paths.dashboard.root, icon: ICONS.dashboard },
-      { title: 'Two', path: paths.dashboard.two, icon: ICONS.ecommerce },
-      { title: 'Three', path: paths.dashboard.three, icon: ICONS.analytics },
-    ],
-  },
-  /**
-   * Management
-   */
-  {
-    subheader: 'Management',
-    items: [
+      { title: 'Home', path: paths.dashboard.root, icon: ICONS.dashboard },
       {
-        title: 'Group',
-        path: paths.dashboard.group.root,
-        icon: ICONS.user,
-        children: [
-          { title: 'Four', path: paths.dashboard.group.root },
-          { title: 'Five', path: paths.dashboard.group.five },
-          { title: 'Six', path: paths.dashboard.group.six },
-        ],
+        title: 'Skills',
+        path: paths.dashboard.skills,
+        icon: <Iconify icon="proicons:reactjs" width="40" height="40" />,
+      },
+      {
+        title: 'Projects',
+        path: paths.dashboard.projects,
+        icon: <Iconify icon="iconoir:laptop-dev-mode" width="40" height="40" />,
+      },
+      {
+        title: 'About',
+        path: paths.dashboard.about,
+        icon: <Iconify icon="icon-park-solid:me" width="40" height="40" />,
+      },
+      {
+        title: 'Contact',
+        path: paths.dashboard.contact,
+        icon: ICONS.analytics,
       },
     ],
   },

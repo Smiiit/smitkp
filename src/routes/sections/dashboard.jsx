@@ -10,12 +10,11 @@ import { AuthGuard } from 'src/auth/guard';
 
 // ----------------------------------------------------------------------
 
-const IndexPage = lazy(() => import('src/pages/dashboard/one'));
-const PageTwo = lazy(() => import('src/pages/dashboard/two'));
-const PageThree = lazy(() => import('src/pages/dashboard/three'));
-const PageFour = lazy(() => import('src/pages/dashboard/four'));
-const PageFive = lazy(() => import('src/pages/dashboard/five'));
-const PageSix = lazy(() => import('src/pages/dashboard/six'));
+const IndexPage = lazy(() => import('src/pages/home-page/home-page'));
+const SkillsPage = lazy(() => import('src/pages/skills-page/skills-page'));
+const ProjectsPage = lazy(() => import('src/pages/projects-page/projects-page'));
+const AboutPage = lazy(() => import('src/pages/about-page/about-page'));
+const ContactPage = lazy(() => import('src/pages/contact-page/contact-page'));
 
 // ----------------------------------------------------------------------
 
@@ -33,16 +32,10 @@ export const dashboardRoutes = [
     element: CONFIG.auth.skip ? <>{layoutContent}</> : <AuthGuard>{layoutContent}</AuthGuard>,
     children: [
       { element: <IndexPage />, index: true },
-      { path: 'two', element: <PageTwo /> },
-      { path: 'three', element: <PageThree /> },
-      {
-        path: 'group',
-        children: [
-          { element: <PageFour />, index: true },
-          { path: 'five', element: <PageFive /> },
-          { path: 'six', element: <PageSix /> },
-        ],
-      },
+      { path: 'skills', element: <SkillsPage /> },
+      { path: 'projects', element: <ProjectsPage /> },
+      { path: 'about', element: <AboutPage /> },
+      { path: 'contact', element: <ContactPage /> },
     ],
   },
 ];
