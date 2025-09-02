@@ -27,7 +27,7 @@ export default function PageNotAvailable() {
         </div>
         <p className="dev-message">
           My portfolio is being crafted for{" "}
-          <span className="dev-highlight">1-2 days</span> from <br />
+          <span className="dev-highlight">1-2 Days</span> from <br />
           <span className="dev-date">{getYesterdayDate()}</span>.
         </p>
         <div className="dev-info-card">
