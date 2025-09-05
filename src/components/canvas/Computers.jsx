@@ -14,7 +14,7 @@ const ComputersCanvas = () => {
   return (
     <div className="w-full h-screen flex justify-center items-center bg-black">
       <model-viewer
-        src="./desktop_pc/scene.gltf"
+        src="./models/scene.glb"
         ar
         ar-modes="webxr scene-viewer quick-look"
         camera-controls
