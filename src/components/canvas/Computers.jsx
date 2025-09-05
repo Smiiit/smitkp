@@ -22,7 +22,7 @@ const ComputersCanvas = () => {
         tone-mapping="neutral"
         shadow-intensity="1"
         style={{ width: "100%", height: "100%", outline: "none" }}
-        poster="poster.webp"
+        poster="./models/poster.webp"
         exposure="1"
       >
         {/* Progress bar */}
