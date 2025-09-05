@@ -14,7 +14,8 @@ const ComputersCanvas = () => {
   return (
     <div className="w-full h-screen flex justify-center items-center bg-black">
       <model-viewer
-        src="./models/scene.glb"
+        src="/models/scene.glb"
+        poster="/models/poster.webp"
         ar
         ar-modes="webxr scene-viewer quick-look"
         camera-controls
@@ -22,8 +23,9 @@ const ComputersCanvas = () => {
         tone-mapping="neutral"
         shadow-intensity="1"
         style={{ width: "100%", height: "100%", outline: "none" }}
-        poster="./models/poster.webp"
         exposure="1"
+        reveal="interaction"
+        loading="lazy"
       >
         {/* Progress bar */}
         <div className="progress-bar hide" slot="progress-bar">
