@@ -1,90 +1,49 @@
-import React, { Suspense, useEffect, useState } from "react";
-import { Canvas } from "@react-three/fiber";
-import { OrbitControls, Preload, useGLTF } from "@react-three/drei";
+import React, { useEffect } from "react";
 
-import CanvasLoader from "../Loader";
-
-const Computers = ({ isMobile }) => {
-  const computer = useGLTF("./desktop_pc/scene.gltf");
-
-  return (
-    <mesh>
-      <hemisphereLight intensity={0.15} groundColor="black" />
-      <spotLight
-        position={[-20, 50, 10]}
-        angle={0.12}
-        penumbra={1}
-        intensity={1}
-        castShadow
-        shadow-mapSize={1024}
-      />
-      <pointLight intensity={1} />
-      <primitive
-        object={computer.scene}
-        scale={isMobile ? 0.7 : 0.75}
-        position={isMobile ? [0, -3, -2.2] : [0, -3.25, -1.5]}
-        rotation={[-0.01, -0.2, -0.1]}
-      />
-    </mesh>
-  );
-};
+// Import model-viewer web component
+import "@google/model-viewer";
 
 const ComputersCanvas = () => {
-  const [isMobile, setIsMobile] = useState(false);
-
   useEffect(() => {
-    const mediaQuery = window.matchMedia("(max-width: 500px)");
-    setIsMobile(mediaQuery.matches);
-
-    const handleMediaQueryChange = (event) => setIsMobile(event.matches);
-    mediaQuery.addEventListener("change", handleMediaQueryChange);
-
-    return () => {
-      mediaQuery.removeEventListener("change", handleMediaQueryChange);
-    };
+    // Ensure <model-viewer> is recognized as a custom element in React
+    if (!window.customElements.get("model-viewer")) {
+      import("@google/model-viewer");
+    }
   }, []);
 
-  // useEffect(() => {
-  //   // Add a listener for changes to the screen size
-  //   const mediaQuery = window.matchMedia("(max-width: 500px)");
-
-  //   // Set the initial value of the `isMobile` state variable
-  //   setIsMobile(mediaQuery.matches);
-
-  //   // Define a callback function to handle changes to the media query
-  //   const handleMediaQueryChange = (event) => {
-  //     setIsMobile(event.matches);
-  //   };
-
-  //   // Add the callback function as a listener for changes to the media query
-  //   mediaQuery.addEventListener("change", handleMediaQueryChange);
-
-  //   // Remove the listener when the component is unmounted
-  //   return () => {
-  //     mediaQuery.removeEventListener("change", handleMediaQueryChange);
-  //   };
-  // }, []);
-
   return (
-    <Canvas
-      shadows
-      frameloop="demand"
-      // dpr={[1, 2]}
-      dpr={[1, isMobile ? 1.5 : 2]}
-      camera={{ position: [20, 3, 5], fov: 25 }}
-      gl={{ preserveDrawingBuffer: true }}
-    >
-      <Suspense fallback={<CanvasLoader />}>
-        <OrbitControls
-          enableZoom={false}
-          maxPolarAngle={Math.PI / 2}
-          minPolarAngle={Math.PI / 2}
-        />
-        <Computers isMobile={isMobile} />
-      </Suspense>
+    <div className="w-full h-screen flex justify-center items-center bg-black">
+      <model-viewer
+        src="./desktop_pc/scene.gltf"
+        ar
+        ar-modes="webxr scene-viewer quick-look"
+        camera-controls
+        auto-rotate
+        tone-mapping="neutral"
+        shadow-intensity="1"
+        style={{ width: "100%", height: "100%", outline: "none" }}
+        poster="poster.webp"
+        exposure="1"
+      >
+        {/* Progress bar */}
+        <div className="progress-bar hide" slot="progress-bar">
+          <div className="update-bar"></div>
+        </div>
 
-      <Preload all />
-    </Canvas>
+        {/* AR button */}
+        <button slot="ar-button" id="ar-button">
+          View in your space
+        </button>
+
+        {/* AR hand prompt */}
+        <div id="ar-prompt">
+          <img
+            src="https://modelviewer.dev/shared-assets/icons/hand.png"
+            alt="AR hand prompt"
+          />
+        </div>
+      </model-viewer>
+    </div>
   );
 };
 
