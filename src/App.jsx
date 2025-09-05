@@ -1,35 +1,27 @@
-import 'src/global.css';
+import { BrowserRouter } from "react-router-dom";
 
-// ----------------------------------------------------------------------
+import { About, Contact, Experience, Feedbacks, Hero, Navbar, Tech, Works, StarsCanvas } from "./components";
 
-import { Router } from 'src/routes/sections';
-
-import { useScrollToTop } from 'src/hooks/use-scroll-to-top';
-
-import { ThemeProvider } from 'src/theme/theme-provider';
-
-import { ProgressBar } from 'src/components/progress-bar';
-import { MotionLazy } from 'src/components/animate/motion-lazy';
-import { SettingsDrawer, defaultSettings, SettingsProvider } from 'src/components/settings';
-
-import { AuthProvider } from 'src/auth/context/jwt';
-
-// ----------------------------------------------------------------------
-
-export default function App() {
-  useScrollToTop();
-
+const App = () => {
   return (
-    <AuthProvider>
-      <SettingsProvider settings={defaultSettings}>
-        <ThemeProvider>
-          <MotionLazy>
-            <ProgressBar />
-            <SettingsDrawer />
-            <Router />
-          </MotionLazy>
-        </ThemeProvider>
-      </SettingsProvider>
-    </AuthProvider>
+    <BrowserRouter>
+      <div className='relative z-0 bg-primary'>
+        <div className='bg-hero-pattern bg-cover bg-no-repeat bg-center'>
+          <Navbar />
+          <Hero />
+        </div>
+        <About />
+        <Experience />
+        <Tech />
+        <Works />
+        <Feedbacks />
+        <div className='relative z-0'>
+          <Contact />
+          <StarsCanvas />
+        </div>
+      </div>
+    </BrowserRouter>
   );
 }
+
+export default App;
